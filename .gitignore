@@ -1,6 +1,3 @@
-git init
-
-'node_modules
+node_modules/
 .env
 .DS_Store
-' | Out-File -Encoding utf8 .gitignore
