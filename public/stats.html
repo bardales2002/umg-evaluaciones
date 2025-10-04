@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resultados | UMG</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/umg_logo.png" alt="UMG" class="logo"/>
+    <div class="headings">
+      <h1>Resultados del Seminario</h1>
+      <p class="subtitle">Promedios y métricas por catedrático</p>
+    </div>
+    <nav class="top-nav">
+      <a href="index.html" class="btn ghost">Responder Evaluación</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Resumen General</h2>
+      <div class="kpis">
+        <div class="kpi"><span id="kpi-total">0</span><small>Respuestas totales</small></div>
+        <div class="kpi"><span id="kpi-prom">0.00</span><small>Promedio general</small></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Calificaciones por Catedrático</h2>
+      <div id="profList" class="prof-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Detalle por Catedrático</h2>
+      <div class="detail-controls">
+        <label>Seleccionar catedrático</label>
+        <select id="profSelect"></select>
+        <button id="btnDetalle" class="btn">Ver detalle</button>
+      </div>
+      <div id="detalle" class="detalle"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© UMG — Evaluación Anónima · Bryan Rocael Bardales Castillo</footer>
+
+<!-- al final del body -->
+<script src="js/stats.js?v=2" defer></script>
+</body>
+</html>

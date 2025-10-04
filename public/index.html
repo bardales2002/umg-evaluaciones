@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evaluación Anónima | UMG</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/umg_logo.png" alt="UMG" class="logo"/>
+    <div class="headings">
+      <h1>Evaluación Anónima de Catedráticos</h1>
+      <p class="subtitle">Seminario · Universidad Mariano Gálvez</p>
+    </div>
+    <nav class="top-nav">
+      <a href="stats.html" class="btn ghost">Ver Resultados</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Formulario de Respuesta</h2>
+
+      <form id="evalForm" novalidate>
+        <div class="grid">
+          <div class="form-group">
+            <label for="profesor">Catedrático</label>
+            <select id="profesor" required></select>
+            <small class="hint">Selecciona al catedrático a evaluar</small>
+          </div>
+        </div>
+
+        <div class="ratings">
+          <h3>Calificaciones (1 a 5)</h3>
+
+          <div class="rating-item">
+            <label>Manejo del tema</label>
+            <div class="stars" data-field="q1"></div>
+          </div>
+          <div class="rating-item">
+            <label>Claridad en la explicación</label>
+            <div class="stars" data-field="q2"></div>
+          </div>
+          <div class="rating-item">
+            <label>Uso de ejemplos/prácticas</label>
+            <div class="stars" data-field="q3"></div>
+          </div>
+          <div class="rating-item">
+            <label>Puntualidad y organización</label>
+            <div class="stars" data-field="q4"></div>
+          </div>
+          <div class="rating-item">
+            <label>Resolución de dudas</label>
+            <div class="stars" data-field="q5"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comentario">Comentario (obligatorio)</label>
+          <textarea id="comentario" rows="4" placeholder="Escribe tu comentario..." required></textarea>
+          <small class="hint">La API rechazará si dejas este campo vacío</small>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Registrar evaluación</button>
+          <button class="btn" type="reset">Limpiar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">© UMG — Evaluación Anónima · Bryan Rocael Bardales Castillo</footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
