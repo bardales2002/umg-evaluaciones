@@ -10,13 +10,11 @@ import profesoresRoutes from './src/routes/profesores.routes.js';
 import evaluacionesRoutes from './src/routes/evaluaciones.routes.js';
 import statsRoutes from './src/routes/stats.routes.js';
 
-// Helpers ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 
-/* Middlewares base */
 app.use(helmet());
 app.use(express.json());
 app.use(morgan('dev'));
@@ -24,10 +22,8 @@ app.use(morgan('dev'));
 const limiter = rateLimit({ windowMs: 60_000, max: 300 });
 app.use(limiter);
 
-/* Estáticos (frontend opcional en /public) */
 app.use(express.static(path.join(__dirname, 'public')));
 
-/* Portada simple */
 app.get('/', (_req, res) => {
   res.send(`
     <style>
@@ -45,23 +41,19 @@ app.get('/', (_req, res) => {
   `);
 });
 
-/* Rutas API */
 app.get('/api', (_req, res) => res.json({ ok: true, message: 'API Local OK' }));
 app.use('/api/profesores', profesoresRoutes);
 app.use('/api/evaluaciones', evaluacionesRoutes);
 app.use('/api/stats', statsRoutes);
 
-/* 404 para cualquier ruta que empiece con /api NO manejada arriba */
 app.use('/api', (_req, res) => {
   res.status(404).json({ ok: false, message: 'Ruta no encontrada' });
 });
 
-/* 404 general (no-API) si no hay archivo estático */
 app.use((_req, res) => {
   res.status(404).send('404 — Recurso no encontrado. Revisa la ruta o agrega tu frontend en /public');
 });
 
-/* Arranque */
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ API local en http://localhost:${PORT}`);

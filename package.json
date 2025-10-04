@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "main": "server.js",
-  "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
-  },
+"scripts": {
+  "dev": "nodemon server.js",
+  "start": "node server.js",
+  "sql:schema": "node scripts/apply-sql.js db/schema.sql",
+  "sql:seed":   "node scripts/apply-sql.js db/seed.sql",
+  "db:init":    "npm run sql:schema && npm run sql:seed"
+},
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",

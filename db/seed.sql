@@ -1,0 +1,16 @@
+INSERT INTO profesores (nombre, curso) VALUES
+('Ing. Byron Rene Prado Jui', 'Seminario de Pre-Cálculo'),
+('Ing. Edwin Estuardo Cordova Milian', 'Estadística'),
+('Ing. Fredy Ademar Ordoñez Alonzo', 'Física'),
+('Ing. Evelyn Raquel Cabrera Sanchez', 'Electrónica'),
+('Lic. Flavio Arturo Juarez Arristondo', 'Metodología de la Investigación'),
+('Ing. Oscar Antonio Valiente Arreaga', 'Redes'),
+('Ing. Allan Alberto Morataya Gomez', 'Redes'),
+('Ing. Richard David Ortiz Sasvin', 'Sistemas Operativos'),
+('Ing. Otto Rigoberto Ortiz Perez', 'Arquitectura de Computadoras'),
+('Ing. Otto Rigoberto Ortiz Perez', 'Análisis de Sistemas'),
+('Ing. Mario Alfredo Cerna Yanes', 'Seguridad de Sistemas'),
+('Ing. Monica Carolina Porres Cu', 'Administración de Tecnologías de la Información'),
+('Ing. Mario Roberto Mendez Romero', 'Programación Básica'),
+('Ing. Dany Otoniel Oliva Belteón', 'Programación Avanzada'),
+('Ing. Carlos Amilcar Tezo Palencia', 'Desarrollo Web');
