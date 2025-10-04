@@ -30,5 +30,5 @@ DB_NAME=railway
 ## Instalar y correr local
 ```bash
 npm install
-npm run db:init   # schema + seed (opcional en local)
-npm run dev       # http://localhost:3000
+npm run db:init   
+npm run dev       
